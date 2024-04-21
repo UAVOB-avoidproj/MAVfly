@@ -1,0 +1,4 @@
+ToolSet: 1.0 (local)Ninja: 1.11.1@/opt/jetbrains/clion/5dfa53f8acb4d_CLion-241.14494.229-aarch64/bin/ninja/linux/aarch64/ninja
+Options: 
+
+Options:-DCMAKE_MAKE_PROGRAM=/opt/jetbrains/clion/5dfa53f8acb4d_CLion-241.14494.229-aarch64/bin/ninja/linux/aarch64/ninja

@@ -1,0 +1,3 @@
+/opt/dev/MAVfly/coordinateFly/CMakeFiles/coordinateFly.dir
+/opt/dev/MAVfly/coordinateFly/CMakeFiles/edit_cache.dir
+/opt/dev/MAVfly/coordinateFly/CMakeFiles/rebuild_cache.dir

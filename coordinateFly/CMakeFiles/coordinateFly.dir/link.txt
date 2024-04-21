@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/coordinateFly.dir/coordinateFly.cpp.o -o coordinateFly  /usr/lib/libmavsdk.so.2.6.0 
