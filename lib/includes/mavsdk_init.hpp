@@ -41,16 +41,29 @@ FlyMode *mavsdk_init(){
     Telemetry telemetry = Telemetry{system.value()};
     Action action = Action{system.value()};
     std::cout << "System: Find successful! and Telemetry/Action.\n";
+    // std::cout << "System-action: " << &action <<std::endl;
+    // std::cout << "System-telemetry: " << &telemetry <<std::endl;
+
+    // const Action::Result arm_result = (&action)->arm();
+    // if (arm_result != Action::Result::Success) {
+    //     std::cerr << "Arming failed: " << arm_result << '\n';
+    //     return nullptr;
+    // }
 
     // Init Offboard mode
-    while (mavsdk.systems().size() == 0) {
-        sleep_for(seconds(1));
-    }
-    std::shared_ptr<System> system2 = mavsdk.systems()[0];
-    Offboard offboard = Offboard{system2};
-    std::cout << "Offboard: Init successful!\n";
-
-    FlyMode *flymode = new FlyMode( &system, &action, &telemetry, &offboard);
+    // while (mavsdk.systems().size() == 0) {
+    //     sleep_for(seconds(1));
+    // }
+    // std::shared_ptr<System> system2 = mavsdk.systems()[0];
+    // Offboard offboard = Offboard{system2};
+    // std::cout << "Offboard: Init successful!\n";
+    // FlyMode *flymode = new FlyMode( &system, &action, &telemetry, &offboard);
+    FlyMode *flymode = new FlyMode(&mavsdk, &system, &action, &telemetry);
+    std::cout << 123 << std::endl;
+    std::cout << &mavsdk << std::endl;
+    std::cout << &system << std::endl;
+    std::cout << &action << std::endl;
+    std::cout << &telemetry << std::endl;
 
     return flymode;
 }
