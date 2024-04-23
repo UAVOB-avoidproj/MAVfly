@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test.dir/test.cpp.o CMakeFiles/test.dir/opt/dev/MAVfly/lib-old/flymode.cpp.o -o test   -L/opt/dev/MAVfly/lib/../lib-old  -Wl,-rpath,/opt/dev/MAVfly/lib/../lib-old /usr/lib/libmavsdk.so.2.6.0 

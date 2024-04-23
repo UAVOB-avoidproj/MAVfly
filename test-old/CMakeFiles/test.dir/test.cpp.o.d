@@ -1,4 +1,4 @@
-CMakeFiles/test.dir/test.cpp.o: /opt/dev/MAVfly/test/test.cpp \
+CMakeFiles/test.dir/test.cpp.o: /opt/dev/MAVfly/test-old/test.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/type_traits \
  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
@@ -175,7 +175,7 @@ CMakeFiles/test.dir/test.cpp.o: /opt/dev/MAVfly/test/test.cpp \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/thread \
  /usr/include/c++/11/bits/this_thread_sleep.h \
- /opt/dev/MAVfly/lib/includes/mavsdk_simplify.hpp \
+ /opt/dev/MAVfly/lib/../lib-old/includes/mavsdk_init.hpp \
  /usr/include/mavsdk/mavsdk.h /usr/include/c++/11/optional \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
@@ -454,4 +454,5 @@ CMakeFiles/test.dir/test.cpp.o: /opt/dev/MAVfly/test/test.cpp \
  /usr/include/mavsdk/plugins/action/action.h \
  /usr/include/mavsdk/plugin_base.h \
  /usr/include/mavsdk/plugins/telemetry/telemetry.h \
- /usr/include/mavsdk/plugins/offboard/offboard.h
+ /usr/include/mavsdk/plugins/offboard/offboard.h \
+ /opt/dev/MAVfly/lib/../lib-old/includes/flymode.hpp

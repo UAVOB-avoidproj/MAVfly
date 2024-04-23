@@ -737,7 +737,7 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   /usr/include/c++/11/pstl/execution_defs.h \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/this_thread_sleep.h \
-  /opt/dev/MAVfly/lib/includes/mavsdk_init.hpp \
+  /opt/dev/MAVfly/lib/includes/mavsdk_simplify.hpp \
   /usr/include/mavsdk/mavsdk.h \
   /usr/include/c++/11/optional \
   /usr/include/c++/11/bits/enable_special_members.h \
@@ -1029,8 +1029,7 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   /usr/include/mavsdk/plugins/action/action.h \
   /usr/include/mavsdk/plugin_base.h \
   /usr/include/mavsdk/plugins/telemetry/telemetry.h \
-  /usr/include/mavsdk/plugins/offboard/offboard.h \
-  /opt/dev/MAVfly/lib/includes/flymode.hpp
+  /usr/include/mavsdk/plugins/offboard/offboard.h
 
 
 /usr/include/mavsdk/plugins/action/action.h:
@@ -1270,6 +1269,8 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
 /usr/include/mavsdk/mavlink/common/mavlink_msg_mission_clear_all.h:
 
 /usr/include/mavsdk/mavlink/common/mavlink_msg_mission_count.h:
+
+/opt/dev/MAVfly/lib/includes/mavsdk_simplify.hpp:
 
 /usr/include/mavsdk/mavlink/common/mavlink_msg_mission_request.h:
 
@@ -1646,8 +1647,6 @@ test.cpp:
 /usr/include/mavsdk/mavlink/common/mavlink_msg_mission_set_current.h:
 
 /usr/include/aarch64-linux-gnu/bits/wchar.h:
-
-/opt/dev/MAVfly/lib/includes/mavsdk_init.hpp:
 
 /usr/include/c++/11/bits/basic_string.h:
 

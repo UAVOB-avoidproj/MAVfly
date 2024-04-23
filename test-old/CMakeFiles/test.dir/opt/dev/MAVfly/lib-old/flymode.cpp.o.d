@@ -1,6 +1,8 @@
-CMakeFiles/test.dir/test.cpp.o: /opt/dev/MAVfly/test/test.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/type_traits \
+CMakeFiles/test.dir/opt/dev/MAVfly/lib-old/flymode.cpp.o: \
+ /opt/dev/MAVfly/lib-old/flymode.cpp /usr/include/stdc-predef.h \
+ /opt/dev/MAVfly/lib/../lib-old/includes/flymode.hpp \
+ /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
+ /usr/include/c++/11/type_traits \
  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -175,7 +177,6 @@ CMakeFiles/test.dir/test.cpp.o: /opt/dev/MAVfly/test/test.cpp \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/thread \
  /usr/include/c++/11/bits/this_thread_sleep.h \
- /opt/dev/MAVfly/lib/includes/mavsdk_simplify.hpp \
  /usr/include/mavsdk/mavsdk.h /usr/include/c++/11/optional \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \

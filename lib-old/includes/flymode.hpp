@@ -1,7 +1,6 @@
 #ifndef __FLYMODE_HPP__
 #define __FLYMODE_HPP__
 
-#include <iostream>
 #include <chrono>
 #include <cstdint>
 #include <iostream>
@@ -20,11 +19,11 @@ using namespace mavsdk;
 using std::chrono::seconds;
 using std::this_thread::sleep_for;
 
-static Mavsdk *mavsdk_ptr;
-static std::optional<std::shared_ptr<System>> *system_ptr;
-static Action *action_ptr;
-static Telemetry *telemetry_ptr;
-static Offboard *offboard_ptr;
+static Mavsdk *mavsdk_ptr = nullptr;
+static std::optional<std::shared_ptr<System>> *system_ptr = nullptr;
+static Action *action_ptr = nullptr;
+static Telemetry *telemetry_ptr = nullptr;
+static Offboard *offboard_ptr = nullptr;
 
 class FlyMode {
 public:

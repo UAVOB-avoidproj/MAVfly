@@ -5,14 +5,15 @@
 #include <memory>
 #include <thread>
 
-#include <mavsdk_simplify.hpp>
+#include <mavsdk_init.hpp>
+#include <flymode.hpp>
 
 using std::chrono::seconds;
 using std::this_thread::sleep_for;
 
 int main(){
-    auto rt = Mavsdk_Init();
-    if(rt){
+    auto rt = mavsdk_init();
+    if(rt != nullptr){
         std::cout << "mavsdk_init success" << std::endl;
     }
     else{
@@ -25,15 +26,9 @@ int main(){
     bool rt2;
     //rt2 = rt->Offboard_init();
     // rt2 = rt->Offboard_close();
-    rt2 = Armed();
+    rt2 = rt->Armed();
     // rt2 = rt->Disarmed();
-    if(rt2){
-        std::cout << "Test OK!" << std::endl;
-    }
-    else{
-        std::cout << "Test Failed!" << std::endl;
-        return 0;
-    }
+
 
     while(1){
         sleep_for(seconds(5));
