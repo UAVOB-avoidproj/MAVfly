@@ -52,6 +52,9 @@ int main(int argc, char** argv){
 //        sleep_for(seconds(1));
 //    }
 
+    // bool Armed_status = telemetry.armed();
+    // std::cout << "FlyMode: Armed: " << Armed_status << '\n';
+
     // 解锁无人机，可以起飞
     std::cout << "Arming...\n";
     const Action::Result arm_result = action.arm();

@@ -12,7 +12,7 @@ using std::chrono::seconds;
 using std::this_thread::sleep_for;
 
 int main(){
-    FlyMode *rt = mavsdk_init();
+    auto rt = mavsdk_init();
     if(rt != nullptr){
         std::cout << "mavsdk_init success" << std::endl;
     }
@@ -21,7 +21,7 @@ int main(){
         return 0;
     }
 
-    sleep_for(seconds(3));
+    sleep_for(seconds(1));
 
     bool rt2;
     //rt2 = rt->Offboard_init();

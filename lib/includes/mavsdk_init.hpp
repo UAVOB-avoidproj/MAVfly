@@ -21,7 +21,7 @@ using std::this_thread::sleep_for;
 
 #define SERIAL "serial:///dev/serial/by-id/usb-ArduPilot_QioTekZealotH743_2D0040000D51303037363639-if00"
 
-FlyMode *mavsdk_init(){
+std::shared_ptr<FlyMode> mavsdk_init(){
     Mavsdk mavsdk{Mavsdk::Configuration{Mavsdk::ComponentType::CompanionComputer}};
 
     // Serial connection
@@ -58,14 +58,17 @@ FlyMode *mavsdk_init(){
     // Offboard offboard = Offboard{system2};
     // std::cout << "Offboard: Init successful!\n";
     // FlyMode *flymode = new FlyMode( &system, &action, &telemetry, &offboard);
-    FlyMode *flymode = new FlyMode(&mavsdk, &system, &action, &telemetry);
+    // FlyMode *flymode = new FlyMode(&mavsdk, &system, &action, &telemetry);
+    // std::unique_ptr<FlyMode> flymode_ptr = std::make_unique<FlyMode>(&mavsdk, &system, &action, &telemetry); 
+    auto flymode_ptr = std::make_shared<FlyMode>(&mavsdk, &system, &action, &telemetry);
+    // FlyMode *flymode = new FlyMode(&mavsdk, &system, &action, &telemetry);
     std::cout << 123 << std::endl;
     std::cout << &mavsdk << std::endl;
     std::cout << &system << std::endl;
     std::cout << &action << std::endl;
     std::cout << &telemetry << std::endl;
 
-    return flymode;
+    return flymode_ptr;
 }
 
 

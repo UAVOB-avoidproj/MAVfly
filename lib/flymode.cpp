@@ -25,7 +25,11 @@ FlyMode::FlyMode(
     std::cout << telemetry_ptr << std::endl;
 
 
-
+    const Action::Result arm_result = action_ptr->set_takeoff_altitude(3.0);
+    if (arm_result != Action::Result::Success) {
+        std::cerr << "Armed: Takeoff altitude set failed:" << arm_result << '\n';
+    }
+    std::cout << "Armed: Takeoff altitude set successful!:" << arm_result << '\n';
     // const Action::Result arm_result = action_ptr->arm();
     // if (arm_result != Action::Result::Success) {
     //     std::cerr << "Armed: Arming failed: " << arm_result << '\n';
@@ -48,18 +52,26 @@ FlyMode::FlyMode(
 FlyMode::~FlyMode(){
 
 
-    std::cout << "FlyMode: System status: " << System_status << '\n';
-    std::cout << "FlyMode: Flight mode: " << FlightMode_status << '\n';
-    std::cout << "FlyMode: Armed: " << Armed_status << '\n';
-    std::cout << "FlyMode: Offboard: " << Offboard_status << '\n';
+    // std::cout << "FlyMode: System status: " << System_status << '\n';
+    // std::cout << "FlyMode: Flight mode: " << FlightMode_status << '\n';
+    // std::cout << "FlyMode: Armed: " << Armed_status << '\n';
+    // std::cout << "FlyMode: Offboard: " << Offboard_status << '\n';
+    std::cout << "Program over!"<<'\n';
 
 }
 
 bool FlyMode::Armed(){
     // std::cout << telemetry_ptr->in_air() <<std::endl;
 
+    // const Action::Result arm_result2 = action_ptr->set_takeoff_altitude(3.0);
+    // if (arm_result2 != Action::Result::Success) {
+    //     std::cerr << "Armed: Takeoff altitude set failed:" << arm_result2 << '\n';
+    // }
+    // std::cout << "Armed: Takeoff altitude set successful!:" << arm_result2 << '\n';
+
 
     std::cout << "Armed: Arming...\n";
+    std::cout << action_ptr << std::endl;
     const Action::Result arm_result = action_ptr->arm();
 
     if (arm_result != Action::Result::Success) {

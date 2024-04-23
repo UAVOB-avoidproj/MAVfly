@@ -20,6 +20,12 @@ using namespace mavsdk;
 using std::chrono::seconds;
 using std::this_thread::sleep_for;
 
+static Mavsdk *mavsdk_ptr;
+static std::optional<std::shared_ptr<System>> *system_ptr;
+static Action *action_ptr;
+static Telemetry *telemetry_ptr;
+static Offboard *offboard_ptr;
+
 class FlyMode {
 public:
     // FlyMode(std::optional<std::shared_ptr<System>> *, Action *, Telemetry *, Offboard *);
@@ -34,11 +40,7 @@ public:
     // bool Offboard_Forward();
 
 private:
-    Mavsdk *mavsdk_ptr;
-    std::optional<std::shared_ptr<System>> *system_ptr;
-    Action *action_ptr;
-    Telemetry *telemetry_ptr;
-    Offboard *offboard_ptr;
+
 
     bool Offboard_status;
     bool Armed_status;
