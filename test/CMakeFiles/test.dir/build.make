@@ -83,30 +83,30 @@ CMakeFiles/test.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/dev/MAVfly/test/test.cpp -o CMakeFiles/test.dir/test.cpp.s
 
-CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o: /opt/dev/MAVfly/lib/flymode.cpp
-CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/dev/MAVfly/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o -MF CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o.d -o CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o -c /opt/dev/MAVfly/lib/flymode.cpp
+CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o: /opt/dev/MAVfly/lib/mavsdk_simplify.cpp
+CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/dev/MAVfly/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o -MF CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o.d -o CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o -c /opt/dev/MAVfly/lib/mavsdk_simplify.cpp
 
-CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/dev/MAVfly/lib/flymode.cpp > CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.i
+CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/dev/MAVfly/lib/mavsdk_simplify.cpp > CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.i
 
-CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/dev/MAVfly/lib/flymode.cpp -o CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.s
+CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/dev/MAVfly/lib/mavsdk_simplify.cpp -o CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/test.cpp.o" \
-"CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o"
+"CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
 test: CMakeFiles/test.dir/test.cpp.o
-test: CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o
+test: CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: /usr/lib/libmavsdk.so.2.6.0
 test: CMakeFiles/test.dir/link.txt

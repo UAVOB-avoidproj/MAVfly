@@ -6,22 +6,27 @@ bool Mavsdk_Init(){
     mavsdk_my = &mavsdk;
 
     // Serial connection
-    ConnectionResult connection_result = mavsdk_my.add_any_connection(SERIAL);
+    ConnectionResult connection_result = mavsdk_my->add_any_connection(SERIAL);
     if (connection_result != ConnectionResult::Success) {
         std::cerr << "Serial:Connection failed: " << connection_result << '\n';
-        return nullptr;
+        return false;
     }
     std::cout << "Serial:Connected success!\n";
 
     // find first_autopilot and init Telemetry and Action
-    system = mavsdk_my.first_autopilot(3.0);
+    auto system = mavsdk_my->first_autopilot(3.0);
+    system_my = &system;
     if (!system) {
         std::cerr << "System: Time out!\n";
-        return nullptr;
+        return false;
     }
-    telemetry_my = Telemetry{system.value()};
-    action_my = Action{system.value()};
+    auto telemetry = Telemetry{system.value()};
+    telemetry_my = &telemetry;
+    auto action = Action{system.value()};
+    action_my = &action;
     std::cout << "System: Find successful! and Telemetry/Action.\n";
+
+    Armed();
 
     return true;
 }
@@ -32,7 +37,7 @@ bool Offboard_Init(){
 
 bool Armed(){
     std::cout << "Armed: Arming...\n";
-    const Action::Result arm_result = action_my.arm();
+    const Action::Result arm_result = action_my->arm();
 
     if (arm_result != Action::Result::Success) {
         std::cerr << "Armed: Arming failed: " << arm_result << '\n';
@@ -44,7 +49,7 @@ bool Armed(){
 }
 bool Disarmed(){
     std::cout << "Disarmed: Disarming...\n";
-    const Action::Result disarm_result = action_my.disarm();
+    const Action::Result disarm_result = action_my->disarm();
 
     if (disarm_result != Action::Result::Success) {
         std::cerr << "Disarmed: Disarming failed: " << disarm_result << '\n';

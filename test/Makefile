@@ -129,29 +129,29 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-opt/dev/MAVfly/lib/flymode.o: opt/dev/MAVfly/lib/flymode.cpp.o
-.PHONY : opt/dev/MAVfly/lib/flymode.o
+opt/dev/MAVfly/lib/mavsdk_simplify.o: opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o
+.PHONY : opt/dev/MAVfly/lib/mavsdk_simplify.o
 
 # target to build an object file
-opt/dev/MAVfly/lib/flymode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o
-.PHONY : opt/dev/MAVfly/lib/flymode.cpp.o
+opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o
+.PHONY : opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o
 
-opt/dev/MAVfly/lib/flymode.i: opt/dev/MAVfly/lib/flymode.cpp.i
-.PHONY : opt/dev/MAVfly/lib/flymode.i
+opt/dev/MAVfly/lib/mavsdk_simplify.i: opt/dev/MAVfly/lib/mavsdk_simplify.cpp.i
+.PHONY : opt/dev/MAVfly/lib/mavsdk_simplify.i
 
 # target to preprocess a source file
-opt/dev/MAVfly/lib/flymode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.i
-.PHONY : opt/dev/MAVfly/lib/flymode.cpp.i
+opt/dev/MAVfly/lib/mavsdk_simplify.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.i
+.PHONY : opt/dev/MAVfly/lib/mavsdk_simplify.cpp.i
 
-opt/dev/MAVfly/lib/flymode.s: opt/dev/MAVfly/lib/flymode.cpp.s
-.PHONY : opt/dev/MAVfly/lib/flymode.s
+opt/dev/MAVfly/lib/mavsdk_simplify.s: opt/dev/MAVfly/lib/mavsdk_simplify.cpp.s
+.PHONY : opt/dev/MAVfly/lib/mavsdk_simplify.s
 
 # target to generate assembly for a file
-opt/dev/MAVfly/lib/flymode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.s
-.PHONY : opt/dev/MAVfly/lib/flymode.cpp.s
+opt/dev/MAVfly/lib/mavsdk_simplify.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.s
+.PHONY : opt/dev/MAVfly/lib/mavsdk_simplify.cpp.s
 
 test.o: test.cpp.o
 .PHONY : test.o
@@ -186,9 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... opt/dev/MAVfly/lib/flymode.o"
-	@echo "... opt/dev/MAVfly/lib/flymode.i"
-	@echo "... opt/dev/MAVfly/lib/flymode.s"
+	@echo "... opt/dev/MAVfly/lib/mavsdk_simplify.o"
+	@echo "... opt/dev/MAVfly/lib/mavsdk_simplify.i"
+	@echo "... opt/dev/MAVfly/lib/mavsdk_simplify.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

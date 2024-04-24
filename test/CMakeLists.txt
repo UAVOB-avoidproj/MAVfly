@@ -22,7 +22,7 @@ link_directories(${MAVFLY_LIB_DIRS})
 
 add_executable(test
         test.cpp
-        ${MAVFLY_LIB_DIRS}/flymode.cpp
+        ${MAVFLY_LIB_DIRS}/mavsdk_simplify.cpp
 )
 
 

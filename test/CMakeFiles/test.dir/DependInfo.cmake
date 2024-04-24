@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/opt/dev/MAVfly/lib/flymode.cpp" "CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o" "gcc" "CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o.d"
+  "/opt/dev/MAVfly/lib/mavsdk_simplify.cpp" "CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o" "gcc" "CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o.d"
   "/opt/dev/MAVfly/test/test.cpp" "CMakeFiles/test.dir/test.cpp.o" "gcc" "CMakeFiles/test.dir/test.cpp.o.d"
   )
 

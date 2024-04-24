@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o"
-  "CMakeFiles/test.dir/opt/dev/MAVfly/lib/flymode.cpp.o.d"
+  "CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o"
+  "CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o.d"
   "CMakeFiles/test.dir/test.cpp.o"
   "CMakeFiles/test.dir/test.cpp.o.d"
   "test"
