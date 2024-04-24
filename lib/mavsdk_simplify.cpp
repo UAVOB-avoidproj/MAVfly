@@ -1,6 +1,6 @@
 #include <mavsdk_simplify.hpp>
 
-bool Mavsdk_Init(){
+void Mavsdk_Init(){
 
     Mavsdk mavsdk{Mavsdk::Configuration{Mavsdk::ComponentType::CompanionComputer}};
     mavsdk_my = &mavsdk;
@@ -9,7 +9,7 @@ bool Mavsdk_Init(){
     ConnectionResult connection_result = mavsdk_my->add_any_connection(SERIAL);
     if (connection_result != ConnectionResult::Success) {
         std::cerr << "Serial:Connection failed: " << connection_result << '\n';
-        return false;
+        // return false;
     }
     std::cout << "Serial:Connected success!\n";
 
@@ -18,7 +18,7 @@ bool Mavsdk_Init(){
     system_my = &system;
     if (!system) {
         std::cerr << "System: Time out!\n";
-        return false;
+        // return false;
     }
     auto telemetry = Telemetry{system.value()};
     telemetry_my = &telemetry;
@@ -26,9 +26,11 @@ bool Mavsdk_Init(){
     action_my = &action;
     std::cout << "System: Find successful! and Telemetry/Action.\n";
 
-    Armed();
+    // Armed();
 
-    return true;
+    while(1) sleep_for(seconds(10));
+
+    // return true;
 }
 bool Offboard_Init(){
 
