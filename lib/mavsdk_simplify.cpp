@@ -32,9 +32,18 @@ void Mavsdk_Init(){
 
     // return true;
 }
-bool Offboard_Init(){
+void Offboard_Init(){
+    // Init Offboard mode
+    while (mavsdk_my->systems().size() == 0) {
+        sleep_for(seconds(1));
+    }
+    std::shared_ptr<System> system2 = mavsdk_my->systems()[0];
+    Offboard offboard = Offboard{system2};
+    offboard_my = &offboard;
+    std::cout << "Offboard: Init successful!\n";
 
-    return true;
+    while(1) sleep_for(seconds(10));
+
 }
 
 bool Armed(){
@@ -59,4 +68,14 @@ bool Disarmed(){
     }
     std::cout << "Disarmed: Disarmed successful!\n";
     return true;
+}
+
+void Offboard_VBY(mavsdk::Offboard::VelocityBodyYawspeed VBYvalue){
+    std::cout << "Offboard vbvForward……\n";
+    while(1) {
+        
+        offboard_my->set_velocity_body(VBYvalue);
+        sleep_for(seconds(1));
+    }
+    
 }

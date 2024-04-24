@@ -12,6 +12,7 @@
 #include <mavsdk/plugins/action/action.h>
 #include <mavsdk/plugins/telemetry/telemetry.h>
 #include <mavsdk/plugins/offboard/offboard.h>
+#include <mavsdk/plugin_base.h>
 
 
 using namespace mavsdk;
@@ -26,8 +27,11 @@ static Action *action_my = nullptr;
 static Telemetry *telemetry_my = nullptr;
 static Offboard *offboard_my = nullptr;
 
+
 void Mavsdk_Init();
-bool Offboard_Init();
+void Offboard_Init();
+
+void Offboard_VBY(mavsdk::Offboard::VelocityBodyYawspeed);
 
 bool Armed();
 bool Disarmed();
