@@ -26,7 +26,7 @@ void Mavsdk_Init(int * rt){
     telemetry_my = &telemetry;
     auto action = Action{system.value()};
     action_my = &action;
-    std::cout << "System: Find successful! and Telemetry/Action.\n";
+    std::cout << "System: Find successful! in Telemetry/Action.\n";
 
     *rt = 1;
     while(1) sleep_for(seconds(10));
@@ -66,6 +66,15 @@ void Offboard_Init(int *rt, int wait_time){
 
     while(1) sleep_for(seconds(10));
 }
+void Offboard_Stop(int *rt){
+    Offboard::Result result = offboard_my->stop();
+    if(result != Offboard::Result::Success){
+        std::cerr << "offboard stop-err: \""<< result << "\"\n";
+        *rt = -1;
+        return;
+    }
+    *rt = 1;
+}
 
 bool Armed(){
     std::cout << "Armed: Arming...\n";
@@ -90,8 +99,16 @@ bool Disarmed(){
     std::cout << "Disarmed: Disarmed successful!\n";
     return true;
 }
-
 void setOffboard_VBY(mavsdk::Offboard::VelocityBodyYawspeed VBYvalue_set){
     VBYvalue = VBYvalue_set;
     std::cout << "Offboard VBYvalue is set:" << VBYvalue << "……\n";
+}
+void Action_takeoff(int *rt){
+    Action::Result result = action_my->takeoff();
+    if(result != Action::Result::Success){
+        std::cerr << "action takeoff-err: \""<< result << "\"\n";
+        *rt = -1;
+        return;
+    }
+    *rt = 1;
 }
