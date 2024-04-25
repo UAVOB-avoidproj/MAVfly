@@ -28,8 +28,8 @@ static Telemetry *telemetry_my = nullptr;
 static Offboard *offboard_my = nullptr;
 
 
-void Mavsdk_Init();
-void Offboard_Init();
+void Mavsdk_Init(int *);
+void Offboard_Init(int *, int);
 
 void Offboard_VBY(mavsdk::Offboard::VelocityBodyYawspeed);
 

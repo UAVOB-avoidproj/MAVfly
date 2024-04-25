@@ -1,6 +1,6 @@
 #include <mavsdk_simplify.hpp>
 
-void Mavsdk_Init(){
+void Mavsdk_Init(int * rt){
 
     Mavsdk mavsdk{Mavsdk::Configuration{Mavsdk::ComponentType::CompanionComputer}};
     mavsdk_my = &mavsdk;
@@ -9,7 +9,8 @@ void Mavsdk_Init(){
     ConnectionResult connection_result = mavsdk_my->add_any_connection(SERIAL);
     if (connection_result != ConnectionResult::Success) {
         std::cerr << "Serial:Connection failed: " << connection_result << '\n';
-        // return false;
+        *rt = -1;
+        return;
     }
     std::cout << "Serial:Connected success!\n";
 
@@ -18,7 +19,8 @@ void Mavsdk_Init(){
     system_my = &system;
     if (!system) {
         std::cerr << "System: Time out!\n";
-        // return false;
+        *rt = -1;
+        return;
     }
     auto telemetry = Telemetry{system.value()};
     telemetry_my = &telemetry;
@@ -26,13 +28,10 @@ void Mavsdk_Init(){
     action_my = &action;
     std::cout << "System: Find successful! and Telemetry/Action.\n";
 
-    // Armed();
-
+    *rt = 1;
     while(1) sleep_for(seconds(10));
-
-    // return true;
 }
-void Offboard_Init(){
+void Offboard_Init(int *rt, int time){
     // Init Offboard mode
     while (mavsdk_my->systems().size() == 0) {
         sleep_for(seconds(1));
@@ -40,10 +39,9 @@ void Offboard_Init(){
     std::shared_ptr<System> system2 = mavsdk_my->systems()[0];
     Offboard offboard = Offboard{system2};
     offboard_my = &offboard;
-    std::cout << "Offboard: Init successful!\n";
+    *rt = 1;
 
     while(1) sleep_for(seconds(10));
-
 }
 
 bool Armed(){

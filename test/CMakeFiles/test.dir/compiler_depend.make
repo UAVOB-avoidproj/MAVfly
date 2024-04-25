@@ -1029,8 +1029,11 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   /usr/include/mavsdk/plugins/action/action.h \
   /usr/include/mavsdk/plugin_base.h \
   /usr/include/mavsdk/plugins/telemetry/telemetry.h \
-  /usr/include/mavsdk/plugins/offboard/offboard.h
+  /usr/include/mavsdk/plugins/offboard/offboard.h \
+  /opt/dev/MAVfly/lib/includes/enumVelocityBodyYawspeed.h
 
+
+/opt/dev/MAVfly/lib/includes/enumVelocityBodyYawspeed.h:
 
 /usr/include/mavsdk/plugins/action/action.h:
 
