@@ -455,4 +455,5 @@ CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o: \
  /usr/include/mavsdk/plugins/action/action.h \
  /usr/include/mavsdk/plugin_base.h \
  /usr/include/mavsdk/plugins/telemetry/telemetry.h \
- /usr/include/mavsdk/plugins/offboard/offboard.h
+ /usr/include/mavsdk/plugins/offboard/offboard.h \
+ /opt/dev/MAVfly/lib/includes/enumVelocityBodyYawspeed.h
