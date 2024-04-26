@@ -46,16 +46,16 @@ int main(){
     setOffboard_VBY(vbyForward);
 
     //  action 控制起飞
-    rt = 0;
-    std::thread thread_takeoff(Action_takeoff, &rt);
-    thread_takeoff.detach();
-    while(1){
-        if(rt == 0) std::cout << "action_takeoff ……\n";
-        if(rt == 1) break;
-        if(rt == -1) {std::cerr << "action_takeoff failed\n";return 0;}
-        sleep_for(seconds(1));
-    }
-    std::cout << "action_takeoff successful!\n";
+    // rt = 0;
+    // std::thread thread_takeoff(Action_takeoff, &rt);
+    // thread_takeoff.detach();
+    // while(1){
+    //     if(rt == 0) std::cout << "action_takeoff ……\n";
+    //     if(rt == 1) break;
+    //     if(rt == -1) {std::cerr << "action_takeoff failed\n";return 0;}
+    //     sleep_for(seconds(1));
+    // }
+    // std::cout << "action_takeoff successful!\n";
 
     // 停止 offboard 控制
     rt = 0;

@@ -32,10 +32,13 @@ static mavsdk::Offboard::VelocityBodyYawspeed VBYvalue = vbyStop;
 
 void Mavsdk_Init(int *);
 void Offboard_Init(int *, int);
+void Offboard_Start(int *);
 void Offboard_Stop(int *);
 
 void setOffboard_VBY(mavsdk::Offboard::VelocityBodyYawspeed);
 void Action_takeoff(int *);
+void Action_land(int *);
+void Return_to_Launch(int *);
 
 bool Armed();
 bool Disarmed();

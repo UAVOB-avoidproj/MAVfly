@@ -55,16 +55,35 @@ void Offboard_Init(int *rt, int wait_time){
     sleep_for(seconds(2));
 
     // 正式切入 offboard 控制
-    Offboard::Result result = offboard.start();
+    // Offboard::Result result = offboard.start();
+    // if(result != Offboard::Result::Success){
+    //     std::cerr << "offboard start-err: \""<< result << "\"\n";
+    //     *rt = -1;
+    //     return;
+    // }
+    int rt2 = 0;
+    std::thread t2(Offboard_Start, &rt2);
+    t2.detach();
+    while(1){
+        if(rt2 == 0) std::cout << "offboard_start ……\n";
+        if(rt2 == 1) break;
+        if(rt2 == -1) {std::cerr << "offboard_start failed\n";return;}
+        sleep_for(seconds(1));
+    }
+    std::cout << "offboard_start successful!\n";
+
+    *rt = 1;
+
+    while(1) sleep_for(seconds(10));
+}
+void Offboard_Start(int *rt){
+    Offboard::Result result = offboard_my->start();
     if(result != Offboard::Result::Success){
         std::cerr << "offboard start-err: \""<< result << "\"\n";
         *rt = -1;
         return;
     }
-
     *rt = 1;
-
-    while(1) sleep_for(seconds(10));
 }
 void Offboard_Stop(int *rt){
     Offboard::Result result = offboard_my->stop();
@@ -107,6 +126,24 @@ void Action_takeoff(int *rt){
     Action::Result result = action_my->takeoff();
     if(result != Action::Result::Success){
         std::cerr << "action takeoff-err: \""<< result << "\"\n";
+        *rt = -1;
+        return;
+    }
+    *rt = 1;
+}
+void Action_land(int *rt){
+    Action::Result result = action_my->land();
+    if(result != Action::Result::Success){
+        std::cerr << "action land-err: \""<< result << "\"\n";
+        *rt = -1;
+        return;
+    }
+    *rt = 1;
+}
+void Return_to_Launch(int *rt){
+    Action::Result result = action_my->return_to_launch();
+    if(result != Action::Result::Success){
+        std::cerr << "action return_to_launch-err: \""<< result << "\"\n";
         *rt = -1;
         return;
     }
