@@ -1,0 +1,6 @@
+/home/orangepi/.cache/JetBrains/RemoteDev/dist/cb1a3f1f02f85_CLion-2024.1.1-aarch64/bin/cmake/linux/aarch64/bin/cmake -DCMAKE_MAKE_PROGRAM=/home/orangepi/.cache/JetBrains/RemoteDev/dist/cb1a3f1f02f85_CLion-2024.1.1-aarch64/bin/ninja/linux/aarch64/ninja -G Ninja -S /opt/dev/MAVfly/test -B /opt/dev/MAVfly/test
+Found
+MAVFLY_LIB_DIRS: /opt/dev/MAVfly/lib
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /opt/dev/MAVfly/test

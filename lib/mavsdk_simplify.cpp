@@ -55,12 +55,6 @@ void Offboard_Init(int *rt, int wait_time){
     sleep_for(seconds(2));
 
     // 正式切入 offboard 控制
-    // Offboard::Result result = offboard.start();
-    // if(result != Offboard::Result::Success){
-    //     std::cerr << "offboard start-err: \""<< result << "\"\n";
-    //     *rt = -1;
-    //     return;
-    // }
     int rt2 = 0;
     std::thread t2(Offboard_Start, &rt2);
     t2.detach();
@@ -122,7 +116,9 @@ void setOffboard_VBY(mavsdk::Offboard::VelocityBodyYawspeed VBYvalue_set){
     VBYvalue = VBYvalue_set;
     std::cout << "Offboard VBYvalue is set:" << VBYvalue << "……\n";
 }
-void Action_takeoff(int *rt){
+void Action_takeoff(int *rt, int attitude){
+    action_my->set_takeoff_altitude(attitude);
+
     Action::Result result = action_my->takeoff();
     if(result != Action::Result::Success){
         std::cerr << "action takeoff-err: \""<< result << "\"\n";
@@ -148,4 +144,8 @@ void Return_to_Launch(int *rt){
         return;
     }
     *rt = 1;
+}
+void cout_sth(){
+    Telemetry::Heading head_rt = telemetry_my->heading();
+    std::cout << "heading_deg: " << head_rt << std::endl;
 }

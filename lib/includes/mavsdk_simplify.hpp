@@ -36,12 +36,14 @@ void Offboard_Start(int *);
 void Offboard_Stop(int *);
 
 void setOffboard_VBY(mavsdk::Offboard::VelocityBodyYawspeed);
-void Action_takeoff(int *);
+void Action_takeoff(int *, int);
 void Action_land(int *);
 void Return_to_Launch(int *);
 
 bool Armed();
 bool Disarmed();
+
+void cout_sth();
 
 
 #endif

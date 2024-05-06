@@ -12,7 +12,8 @@ else ()
     message("Not Found")
     return()
 endif ()
-set(MAVFLY_LIB_DIRS "$ENV{MAVFLY_LIB_DIRS}")
+#set(MAVFLY_LIB_DIRS "$ENV{MAVFLY_LIB_DIRS}")
+set(MAVFLY_LIB_DIRS "/opt/dev/MAVfly/lib")
 message("MAVFLY_LIB_DIRS: ${MAVFLY_LIB_DIRS}")
 include_directories(
     ${MAVFLY_LIB_DIRS}/includes
