@@ -57,7 +57,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /opt/dev/MAVfly/lib
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /opt/dev/MAVfly/lib
+CMAKE_BINARY_DIR = /opt/dev/MAVfly/lib/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/mavfly.dir/clean
 CMakeFiles/mavfly.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mavfly.dir/build.make CMakeFiles/mavfly.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mavfly.dir/build.make CMakeFiles/mavfly.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/opt/dev/MAVfly/lib/CMakeFiles --progress-num=1,2 "Built target mavfly"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/opt/dev/MAVfly/lib/build/CMakeFiles --progress-num=1,2 "Built target mavfly"
 .PHONY : CMakeFiles/mavfly.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mavfly.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /opt/dev/MAVfly/lib/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/dev/MAVfly/lib/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mavfly.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /opt/dev/MAVfly/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/dev/MAVfly/lib/build/CMakeFiles 0
 .PHONY : CMakeFiles/mavfly.dir/rule
 
 # Convenience name for target.

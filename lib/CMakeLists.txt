@@ -19,10 +19,21 @@ include_directories(
 # 添加链接目录（如果mavsdk库需要）
 link_directories(${MAVFLY_LIB_DIRS}) 
 
+# 创建动态库之前，明确指定输出目录为绝对路径
+set(LIBRARY_OUTPUT_PATH /opt/dev/MAVfly/lib)
+message("Output directory set to: ${LIBRARY_OUTPUT_PATH}")
+
 # 创建动态库
 add_library(mavfly SHARED # 修改为SHARED类型创建动态库
         ${MAVFLY_LIB_DIRS}/mavsdk_simplify.cpp
 )
+
+# 注意：由于前面设置了LIBRARY_OUTPUT_PATH，此处的set_target_properties可能不再必要
+# 但根据具体CMake版本和配置，有时仍需显式设置，确保兼容性
+set_target_properties(mavfly PROPERTIES 
+    RUNTIME_OUTPUT_DIRECTORY "${LIBRARY_OUTPUT_PATH}"
+)
+message("LIBRARY_OUTPUT_PATH: ${LIBRARY_OUTPUT_PATH}")
 
 # 链接所需的库
 target_link_libraries(mavfly

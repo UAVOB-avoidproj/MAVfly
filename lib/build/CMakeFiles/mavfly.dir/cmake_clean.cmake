@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "../libmavfly.pdb"
+  "../libmavfly.so"
   "CMakeFiles/mavfly.dir/mavsdk_simplify.cpp.o"
   "CMakeFiles/mavfly.dir/mavsdk_simplify.cpp.o.d"
-  "libmavfly.pdb"
-  "libmavfly.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /opt/dev/MAVfly/lib
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /opt/dev/MAVfly/lib
+CMAKE_BINARY_DIR = /opt/dev/MAVfly/lib/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /opt/dev/MAVfly/lib/CMakeFiles /opt/dev/MAVfly/lib//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/dev/MAVfly/lib/build/CMakeFiles /opt/dev/MAVfly/lib/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /opt/dev/MAVfly/lib/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/dev/MAVfly/lib/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
