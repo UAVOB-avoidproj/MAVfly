@@ -1,0 +1,3 @@
+/opt/dev/MAVfly/src/build/CMakeFiles/mavfly.dir
+/opt/dev/MAVfly/src/build/CMakeFiles/edit_cache.dir
+/opt/dev/MAVfly/src/build/CMakeFiles/rebuild_cache.dir
