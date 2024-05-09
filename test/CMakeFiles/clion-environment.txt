@@ -1,4 +1,0 @@
-ToolSet: 1.0 (local)Ninja: 1.11.1@/home/orangepi/.cache/JetBrains/RemoteDev/dist/cb1a3f1f02f85_CLion-2024.1.1-aarch64/bin/ninja/linux/aarch64/ninja
-Options: 
-
-Options:-DCMAKE_MAKE_PROGRAM=/home/orangepi/.cache/JetBrains/RemoteDev/dist/cb1a3f1f02f85_CLion-2024.1.1-aarch64/bin/ninja/linux/aarch64/ninja

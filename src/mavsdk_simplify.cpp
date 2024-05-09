@@ -54,17 +54,17 @@ void Offboard_Init(int *rt, int wait_time){
     t.detach();
     sleep_for(seconds(2));
 
-    // 正式切入 offboard 控制
-    int rt2 = 0;
-    std::thread t2(Offboard_Start, &rt2);
-    t2.detach();
-    while(1){
-        if(rt2 == 0) std::cout << "offboard_start ……\n";
-        if(rt2 == 1) break;
-        if(rt2 == -1) {std::cerr << "offboard_start failed\n";return;}
-        sleep_for(seconds(1));
-    }
-    std::cout << "offboard_start successful!\n";
+    // 不再自动切入 offboard 控制，需用户自行手动调用 Offboard_Start 函数
+    // int rt2 = 0;
+    // std::thread t2(Offboard_Start, &rt2);
+    // t2.detach();
+    // while(1){
+    //     if(rt2 == 0) std::cout << "offboard_start ……\n";
+    //     if(rt2 == 1) break;
+    //     if(rt2 == -1) {std::cerr << "offboard_start failed\n";return;}
+    //     sleep_for(seconds(1));
+    // }
+    // std::cout << "offboard_start successful!\n";
 
     *rt = 1;
 

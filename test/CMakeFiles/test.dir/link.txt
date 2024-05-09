@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test.dir/test.cpp.o CMakeFiles/test.dir/opt/dev/MAVfly/lib/mavsdk_simplify.cpp.o -o test   -L/opt/dev/MAVfly/lib  -Wl,-rpath,/opt/dev/MAVfly/lib /usr/lib/libmavsdk.so.2.9.1 

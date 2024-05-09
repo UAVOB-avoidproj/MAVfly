@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test.dir/test.cpp.o -o test  -Wl,-rpath,/opt/dev/MAVfly/lib /opt/dev/MAVfly/lib/libmavfly.so 

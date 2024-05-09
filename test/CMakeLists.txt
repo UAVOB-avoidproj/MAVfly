@@ -5,35 +5,32 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(test)
 
-find_package(MAVSDK REQUIRED)
-if (MAVSDK_FOUND)
-    message("Found")
-else ()
-    message("Not Found")
-    return()
-endif ()
-#set(MAVFLY_LIB_DIRS "$ENV{MAVFLY_LIB_DIRS}")
-set(MAVFLY_LIB_DIRS "/opt/dev/MAVfly/lib")
-message("MAVFLY_LIB_DIRS: ${MAVFLY_LIB_DIRS}")
-include_directories(
-    ${MAVFLY_LIB_DIRS}/includes
-#    ${MAVFLY_LIB_DIRS}
-    )
-link_directories(${MAVFLY_LIB_DIRS})
+# 设置项目并指明链接库的具体路径
+set(MAVFLY_LIB_PATH "/opt/dev/MAVfly/lib/libmavfly.so")
 
+# 检查库文件是否存在
+if(NOT EXISTS ${MAVFLY_LIB_PATH})
+    message(FATAL_ERROR "libmavfly.so not found at ${MAVFLY_LIB_PATH}")
+endif()
+
+# 添加可执行文件及其源文件
 add_executable(test
         test.cpp
-        ${MAVFLY_LIB_DIRS}/mavsdk_simplify.cpp
 )
 
-
+# 链接到特定路径的动态库
 target_link_libraries(test
-        MAVSDK::mavsdk
+        PRIVATE
+        ${MAVFLY_LIB_PATH}
 )
 
+# 根据编译器设定警告选项
 if (NOT MSVC)
-    add_compile_options(test PRIVATE -Wall -Wextra)
-else ()
-    add_compile_options(test PRIVATE -WX -W2)
-endif ()
+    target_compile_options(test PRIVATE -Wall -Wextra)
+else()
+    target_compile_options(test PRIVATE /WX /W2)
+endif()
 
+# 如果需要包含头文件，添加包含目录（假设头文件也在类似路径下）
+include_directories(/opt/dev/MAVfly/lib/includes)
+include_directories(/opt/dev/MAVfly/lib/includes/mavsdk)
