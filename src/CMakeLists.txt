@@ -8,16 +8,16 @@ project(libmavfly) # 修改项目名为库名
 find_package(MAVSDK REQUIRED)
 
 # 设置动态库输出路径及其他配置
-set(MAVFLY_LIB_DIRS "/opt/dev/MAVfly/src")
-message("MAVFLY_LIB_DIRS: ${MAVFLY_LIB_DIRS}")
+set(MAVFLY_SRC_DIRS "/opt/dev/MAVfly/src")
+message("MAVFLY_SRC_DIRS: ${MAVFLY_SRC_DIRS}")
 
 # 添加头文件目录
 include_directories(
-    ${MAVFLY_LIB_DIRS}/includes
+    ${MAVFLY_SRC_DIRS}/includes
 )
 
 # 添加链接目录（如果mavsdk库需要）
-link_directories(${MAVFLY_LIB_DIRS}) 
+link_directories(${MAVFLY_SRC_DIRS}) 
 
 # 创建动态库之前，明确指定输出目录为绝对路径
 set(LIBRARY_OUTPUT_PATH /opt/dev/MAVfly/lib)
@@ -25,7 +25,7 @@ message("Output directory set to: ${LIBRARY_OUTPUT_PATH}")
 
 # 创建动态库
 add_library(mavfly SHARED # 修改为SHARED类型创建动态库
-        ${MAVFLY_LIB_DIRS}/mavsdk_simplify.cpp
+        ${MAVFLY_SRC_DIRS}/mavsdk_simplify.cpp
 )
 
 # 注意：由于前面设置了LIBRARY_OUTPUT_PATH，此处的set_target_properties可能不再必要
