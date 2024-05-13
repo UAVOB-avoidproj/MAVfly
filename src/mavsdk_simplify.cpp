@@ -152,8 +152,42 @@ void cout_sth(){
 Telemetry::Position get_Global_Position(){
     return telemetry_my->position();
 }
-Telemetry::FlightMode get_FlightMode(){
-    return telemetry_my->flight_mode();
+std::string get_FlightMode(){
+    Telemetry::FlightMode _flightmode = telemetry_my->flight_mode();
+    switch (_flightmode) {
+    case Telemetry::FlightMode::Unknown:
+        return "Unknown";
+    case Telemetry::FlightMode::Ready:
+        return "Ready";
+    case Telemetry::FlightMode::Takeoff:
+        return "Takeoff";
+    case Telemetry::FlightMode::Hold:
+        return "Hold";
+    case Telemetry::FlightMode::Mission:
+        return "Mission";
+    case Telemetry::FlightMode::ReturnToLaunch:
+        return "Return To Launch";
+    case Telemetry::FlightMode::Land:
+        return "Land";
+    case Telemetry::FlightMode::Offboard:
+        return "Offboard";
+    case Telemetry::FlightMode::FollowMe:
+        return "Follow Me";
+    case Telemetry::FlightMode::Manual:
+        return "Manual";
+    case Telemetry::FlightMode::Altctl:
+        return "Altitude Control";
+    case Telemetry::FlightMode::Posctl:
+        return "Position Control";
+    case Telemetry::FlightMode::Acro:
+        return "Acro";
+    case Telemetry::FlightMode::Stabilized:
+        return "Stabilized";
+    case Telemetry::FlightMode::Rattitude:
+        return "Rattitude";
+    default:
+        return "Invalid Mode";
+    }
 }
 Telemetry::Odometry get_Odometry(){
     return telemetry_my->odometry();
