@@ -150,7 +150,14 @@ void cout_sth(){
     std::cout << "heading_deg: " << head_rt << std::endl;
 }
 Telemetry::Position get_Global_Position(){
-    Telemetry::Position _position = telemetry_my->position();
-
-    return _position;
+    return telemetry_my->position();
+}
+Telemetry::FlightMode get_FlightMode(){
+    return telemetry_my->flight_mode();
+}
+Telemetry::Odometry get_Odometry(){
+    return telemetry_my->odometry();
+}
+bool Health_all_ok(){
+    return telemetry_my->health_all_ok();
 }

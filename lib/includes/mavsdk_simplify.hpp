@@ -46,5 +46,6 @@ bool Disarmed();
 void cout_sth();
 
 Telemetry::Position get_Global_Position();
+Telemetry::FlightMode get_FlightMode();
 
 #endif
