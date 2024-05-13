@@ -45,6 +45,6 @@ bool Disarmed();
 
 void cout_sth();
 
-void subscribe_Global_Position(Telemetry::PositionCallback);
+Telemetry::Position get_Global_Position();
 
 #endif

@@ -149,7 +149,8 @@ void cout_sth(){
     Telemetry::Heading head_rt = telemetry_my->heading();
     std::cout << "heading_deg: " << head_rt << std::endl;
 }
-void subscribe_Global_Position(Telemetry::PositionCallback &callback){
-    // Telemetry::Position oldFlightMode=Telemetry::Position::Unknown;
-    telemetry_my->subscribe_position(callback);
+Telemetry::Position get_Global_Position(){
+    Telemetry::Position _position = telemetry_my->position();
+
+    return _position;
 }

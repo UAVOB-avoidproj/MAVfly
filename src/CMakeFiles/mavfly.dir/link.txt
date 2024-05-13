@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,libmavfly.so -o /opt/dev/MAVfly/lib/libmavfly.so CMakeFiles/mavfly.dir/mavsdk_simplify.cpp.o   -L/opt/dev/MAVfly/src  -Wl,-rpath,/opt/dev/MAVfly/src /usr/lib/libmavsdk.so.2.9.1 
