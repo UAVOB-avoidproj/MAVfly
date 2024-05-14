@@ -195,3 +195,6 @@ Telemetry::Odometry get_Odometry(){
 bool Health_all_ok(){
     return telemetry_my->health_all_ok();
 }
+Telemetry::EulerAngle get_EulerAngle(){
+    return telemetry_my->attitude_euler();
+}

@@ -49,6 +49,7 @@ Telemetry::Position get_Global_Position();
 std::string get_FlightMode();
 Telemetry::Odometry get_Odometry();
 bool Health_all_ok();
+Telemetry::EulerAngle get_EulerAngle();
 
 
 #endif
